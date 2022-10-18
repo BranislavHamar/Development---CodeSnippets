@@ -1,6 +1,6 @@
 '**********************************************************'
 ' Common Sales plugin - CIT Information
-' Developed by Branislav Hamar, TNT Slovakia, EEUR region  
+' Developed by Branislav Hamar  
 '
 ' Version 1.5
 '**********************************************************'
