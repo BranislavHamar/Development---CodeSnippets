@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><labelRequest>
+
+    <!--##########################################################
+    
+    Description:   This is a basic xml request with one consignment
+    
+    
+    Please note:   In order to complete certification of your 
+                   express label connection.
+                        
+                   ALL element data  MUST be enclosed within 
+                   CDATA tags.
+    
+    ########################################################## -->
+
+    <consignment key="CON1">
+        <consignmentIdentity>
+            <consignmentNumber><![CDATA[123456782]]></consignmentNumber>
+            <customerReference><![CDATA[Cust Ref]]></customerReference>
+        </consignmentIdentity>
+        <collectionDateTime><![CDATA[2022-11-09T12:43:00]]></collectionDateTime>
+        <sender>
+            <name><![CDATA[John Smith]]></name>
+            <addressLine1><![CDATA[TNT Express]]></addressLine1>
+            <!--Element addressLine2 is optional-->
+            <addressLine2><![CDATA[TNT House]]></addressLine2>
+            <!--Element addressLine3 is optional-->
+            <addressLine3><![CDATA[Holly Lane]]></addressLine3>
+            <!--Element town is optional provided there is a postcode -->
+            <town><![CDATA[Atherstone]]></town>
+            <!--Element exactMatch is optional -->
+            <exactMatch><![CDATA[Y]]></exactMatch>
+            <!--Element province is optional-->
+            <province><![CDATA[Warks]]></province>
+            <!--Element postcode is optional-->
+            <postcode><![CDATA[CV9 1TT]]></postcode>
+            <country><![CDATA[GB]]></country>            
+        </sender>
+        <delivery>
+            <name><![CDATA[TNT Corporate Head Office]]></name>
+            <addressLine1><![CDATA[Neptunusstraat 41-63]]></addressLine1>
+            <!--Element addressLine2 is optional-->
+            <addressLine2><![CDATA[Taurusavenue 111]]></addressLine2>
+            <!--Element addressLine3 is optional-->
+            <addressLine3><![CDATA[P.O. Box 13000]]></addressLine3>
+            <!--Element town is optional provided there is a postcode -->
+            <town><![CDATA[Hoofddorp]]></town>
+            <!--Element exactMatch is optional -->
+            <exactMatch><![CDATA[Y]]></exactMatch>
+            <!--Element province is optional-->
+            <province/>
+            <!--Element postcode is optional-->
+            <postcode><![CDATA[2132 LS]]></postcode>
+            <country><![CDATA[NL]]></country>
+        </delivery>
+        <product>
+            <lineOfBusiness><![CDATA[2]]></lineOfBusiness>
+            <groupId><![CDATA[0]]></groupId>
+            <subGroupId><![CDATA[0]]></subGroupId>
+            <id>EX</id>
+            <type><![CDATA[N]]></type>
+            <!--Element option is optional, maxOccurs=5-->
+            <option><![CDATA[PR]]></option>
+        </product>
+        <account>
+            <accountNumber><![CDATA[100445]]></accountNumber>
+            <accountCountry><![CDATA[GB]]></accountCountry>
+        </account>
+        <!--Element bulkShipment is optional-->
+        <bulkShipment><![CDATA[Y]]></bulkShipment>
+        <!--Element specialInstructions is optional-->
+        <specialInstructions/>
+        <!--Element cashAmount is optional-->
+        <cashAmount>12.34</cashAmount>
+        <!--Element cashCurrency is optional-->
+        <cashCurrency>GBP</cashCurrency>
+        <!--Element cashType is optional-->
+        <cashType>0</cashType>
+        <!--Element customControlled is optional-->
+        <customControlled><![CDATA[Y]]></customControlled>
+        <!--Element termsOfPayment is optional-->
+        <termsOfPayment><![CDATA[S]]></termsOfPayment>
+        <totalNumberOfPieces><![CDATA[3]]></totalNumberOfPieces>
+        <!--Element pieceLine, maxOccurs=unbounded-->
+        <pieceLine>
+            <identifier><![CDATA[1]]></identifier>
+            <goodsDescription>piecelinegoods desc</goodsDescription>
+            <pieceMeasurements>
+                <length><![CDATA[1.11]]></length>
+                <width><![CDATA[1.11]]></width>
+                <height><![CDATA[1.11]]></height>
+                <weight><![CDATA[1.11]]></weight>
+            </pieceMeasurements>
+            <!--Element pieces, maxOccurs=unbounded-->
+            <pieces>
+                <!--Element sequenceNumbers, maxOccurs=unbounded-->
+                <sequenceNumbers><![CDATA[1,2]]></sequenceNumbers>
+                <pieceReference><![CDATA[piece1]]></pieceReference>
+            </pieces>
+            <pieces>
+                <!--Element sequenceNumbers, maxOccurs=unbounded-->
+                <sequenceNumbers><![CDATA[3]]></sequenceNumbers>
+                <pieceReference><![CDATA[piece3]]></pieceReference>
+            </pieces>
+        </pieceLine>
+    </consignment>
+</labelRequest>
