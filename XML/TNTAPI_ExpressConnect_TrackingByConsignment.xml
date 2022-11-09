@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TrackRequest locale="en_US" version="3.1">
+<SearchCriteria marketType="Domestic" originCountry="GB">
+<ConsignmentNumber>170092731</ConsignmentNumber>
+</SearchCriteria>
+<LevelOfDetail>
+<Complete originAddress="true" destinationAddress="true" package="true" shipment="true"  locale="FR" />
+</LevelOfDetail>
+</TrackRequest>
