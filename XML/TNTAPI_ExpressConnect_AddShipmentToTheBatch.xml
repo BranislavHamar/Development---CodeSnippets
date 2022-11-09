@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><ESHIPPER>
+   <!--##########################################################
+    
+    Description:   This is a basic xml request to book a previous 
+	grouped batch of consignments.	
+	
+	Group Code process is a three step process.
+	
+	1. Create a shipment to obtain the Group Code
+	2. Add Shipments to the Group
+	3. Book / Ship the Group
+	
+	To obtain a group code just at <SHOW_GROUPCODE/> to the activity element 
+	<ACTIVITY>
+	<CREATE>
+		<CONREF>grp001_a</CONREF>
+	</CREATE>
+	<SHOW_GROUPCODE/>
+	</ACTIVITY>
+	    
+    Please note:   It is recommend to ensure all text data are
+				   enclosed within CDATA tags.   This allows 
+				   easy support of & characters in Company names.
+    
+    ########################################################## -->
+   <LOGIN>
+      <COMPANY>YOUR USERID</COMPANY>
+      <PASSWORD>YOUR PASSWORD</PASSWORD>
+      <APPID>EC</APPID>
+      <APPVERSION>3.1</APPVERSION>
+   </LOGIN>
+   <CONSIGNMENTBATCH>
+      <!--Please include the group code previously obtained to highlight which group to add this consignment to -->
+      <GROUPCODE>9999</GROUPCODE>
+      <SENDER>
+         <COMPANYNAME><![CDATA[Sender & TEST DO NOT COLLECT Company]]></COMPANYNAME>
+         <STREETADDRESS1><![CDATA[TNT Express]]></STREETADDRESS1>
+         <!--Element STREETADDRESS2 is optional-->
+         <STREETADDRESS2><![CDATA[TNT House]]></STREETADDRESS2>
+         <!--Element STREETADDRESS3 is optional-->
+         <STREETADDRESS3><![CDATA[Holly Lane]]></STREETADDRESS3>
+         <!--Element CITY is a key element.  To ship with TNT, we must know the exact 
+			location that you are shipping to/from, in TNT terms. The full town name must match 
+			the spelling TNT uses for validation.  Please work with your TNT representative to 
+			ensure your town names match TNT?s in case of errors.-->
+         <CITY><![CDATA[Atherstone]]></CITY>
+         <!--Element PROVINCE is optional and not validated by TNT.-->
+         <PROVINCE><![CDATA[Warwickshire]]></PROVINCE>
+         <!--Element postcode is optional in countries that do not support postcodes -->
+         <POSTCODE><![CDATA[CV9 2ry]]></POSTCODE>
+         <COUNTRY><![CDATA[GB]]></COUNTRY>
+         <ACCOUNT><![CDATA[YOUR ACCOUNT]]></ACCOUNT>
+         <!--Element VAT is optional  -->
+         <VAT/>
+         <CONTACTNAME><![CDATA[Mr Contact]]></CONTACTNAME>
+         <CONTACTDIALCODE><![CDATA[01827]]></CONTACTDIALCODE>
+         <CONTACTTELEPHONE><![CDATA[717733]]></CONTACTTELEPHONE>
+         <CONTACTEMAIL><![CDATA[contact@tnt.com]]></CONTACTEMAIL>
+         <COLLECTION>
+            <!--Element SHIPDATE is the date which you wish the parcels to be collected,
+				and it must be supplied in the format DD/MM/CCYY.  It is a mandatory field.-->
+            <SHIPDATE><![CDATA[09/11/2022]]></SHIPDATE>
+            <!--Collections is raised for every consignment, with exception of customers with 
+				scheduled collection.  The earliest time the goods may be collected (Goods ready time) 
+				should be supplied in the PREFCOLLECTTIM / FROM element, in the format HH:MM.
+				The latest time the goods can be collected must be supplied in the 
+				PREFCOLLECTTIM / TO element, in the format HH:MM.
+				If your company has a lunchtime, them please supply the morning opening times in the
+				PREFCOLLECTTIM element and the afternoon opening times in the ALTCOLLECTTIME.
+				These details are validated against the time the TNT truck will be within your area, to ensure 
+				the TNT truck is within your area at a time where you are open.-->
+            <PREFCOLLECTTIME>
+               <FROM><![CDATA[09:00]]></FROM>
+               <TO><![CDATA[10:00]]></TO>
+            </PREFCOLLECTTIME>
+            <ALTCOLLECTTIME>
+               <FROM><![CDATA[11:00]]></FROM>
+               <TO><![CDATA[12:00]]></TO>
+            </ALTCOLLECTTIME>
+            <!--Please supply any special instruction which need to be passed to the collection driver 
+				in the <COLLINSTRUCTIONS> element. -->
+            <COLLINSTRUCTIONS><![CDATA[use rear gate]]></COLLINSTRUCTIONS>
+         </COLLECTION>
+      </SENDER>
+   </CONSIGNMENTBATCH>
+   <ACTIVITY>
+      <BOOK EMAILREQD="Y" ShowBookingRef="Y">
+         <GROUPCODE>9999</GROUPCODE>
+      </BOOK>
+      <SHIP>
+         <GROUPCODE>9999</GROUPCODE>
+      </SHIP>
+      <PRINT>
+         <MANIFEST>
+            <GROUPCODE>9999</GROUPCODE>
+         </MANIFEST>
+      </PRINT>
+   </ACTIVITY>
+</ESHIPPER>
