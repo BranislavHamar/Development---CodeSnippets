@@ -1,0 +1,4 @@
+$ cat .gitattributes
+*.xml linguist-language=XML
+*.json linguist-language=JSON
+*.vbs linguist-language=VBScript
