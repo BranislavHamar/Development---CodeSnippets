@@ -1,0 +1,136 @@
+{
+    "labelResponseOptions": "URL_ONLY",
+    "accountNumber": {
+        "value": {{Account}}
+    },
+    "_Comment_": "---------- SHIPMENT SECTION ----------",
+    "requestedShipment": {
+        "shipDatestamp": "2021-12-13",
+        "pickupType": "CONTACT_FEDEX_TO_SCHEDULE",
+        "serviceType": "INTERNATIONAL_ECONOMY",
+        "packagingType": "YOUR_PACKAGING",
+        "blockInsightVisibility": false,
+        "labelSpecification": {
+            "imageType": "PDF",
+            "labelStockType": "PAPER_85X11_TOP_HALF_LABEL"
+        },
+        "shipper": {
+            "contact": {
+                "personName": "Sender Contact Name",
+                "companyName": "Sender Company Name",
+                "emailAddress": "sender@shipper.it",
+                "phoneNumber": "0221881"
+            },
+            "address": {
+                "streetLines": [
+                    "SENDER ADDRESS LINE 1",
+                    "SENDER ADDRESS LINE 2",
+                    "SENDER ADDRESS LINE 3"
+                ],
+                "city": "Sender City Name",
+                "postalCode": "20128",
+                "countryCode": "IT",
+                "residential": false
+            }
+        },
+        "recipients": [
+            {
+                "contact": {
+                    "personName": "Recipient Contact Name",
+                    "companyName": "Recipient Company Name",
+                    "emailAddress": "recipient@recipient.com",
+                    "phoneNumber": "1222222222"
+                },
+                "address": {
+                    "streetLines": [
+                        "RECIPIENT ADDRESS LINE 1",
+                        "RECIPIENT ADDRESS LINE 2",
+                        "RECIPIENT ADDRESS LINE 3"
+                    ],
+                    "city": "New York",
+                    "stateOrProvinceCode": "NY",
+                    "postalCode": "10010",
+                    "countryCode": "US",
+                    "residential": true
+                }
+            }
+        ],
+        "shippingChargesPayment": {
+            "paymentType": "SENDER"
+        },
+        "customsClearanceDetail": {
+            "dutiesPayment": {
+                "paymentType": "SENDER",
+                "payor": {
+                    "responsibleParty": {
+                        "accountNumber": {
+                            "value": {{Account}}
+                        }
+                    }
+                }
+            },
+            "isDocumentOnly": false,
+            "totalCustomsValue": {
+                "amount": "15.00",
+                "currency": "EUR"
+            },
+            "_Comment_": "---------- COMMODITIES SECTION ----------",
+            "commodities": [
+                {
+                    "description": "COMMODITY DESCRIPTION 1",
+                    "countryOfManufacture": "IT",
+                    "weight": {
+                        "units": "KG",
+                        "value": "12.1"
+                    },
+                    "quantity": "1",
+                    "quantityUnits": "PCS",
+                    "unitPrice": {
+                        "amount": "10.00",
+                        "currency": "EUR"
+                    },
+                    "customsValue": {
+                        "amount": "10.00",
+                        "currency": "EUR"
+                    }
+                },
+                {
+                    "description": "COMMODITY DESCRIPTION 2",
+                    "countryOfManufacture": "IT",
+                    "weight": {
+                        "units": "KG",
+                        "value": "10.1"
+                    },
+                    "quantity": "1",
+                    "quantityUnits": "PCS",
+                    "unitPrice": {
+                        "amount": "5.00",
+                        "currency": "EUR"
+                    },
+                    "customsValue": {
+                        "amount": "5.00",
+                        "currency": "EUR"
+                    }
+                }
+            ]
+        },
+        "_Comment_": "---------- PACKAGE SECTION ----------",
+        "totalPackageCount": "2",
+        "requestedPackageLineItems": [
+            {
+                "_Comment_": " groupPackageCount designates the number of identical packages of the specified weight + dimensions in the shipment",
+                "groupPackageCount": "2",
+                "weight": {
+                    "units": "KG",
+                    "value": "13.5"
+                },
+                "dimensions": {
+                    "length": 30,
+                    "width": 20,
+                    "height": 20,
+                    "units": "CM"
+                }
+            }
+        ]
+    }
+}
