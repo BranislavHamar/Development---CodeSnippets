@@ -1,0 +1,19 @@
+{
+  "validateAddressControlParameters": {
+    "includeResolutionTokens": false
+  },
+  "addressesToValidate": [
+    {
+      "contact": {},
+      "address": {
+        "streetLines": [
+          "Willy-Brandt-Straße 1"
+        ],
+        "city": "Berlin",
+        "stateOrProvinceCode": "",
+        "postalCode": "10557",
+        "countryCode": "DE"
+      }
+    }
+  ]
+}
