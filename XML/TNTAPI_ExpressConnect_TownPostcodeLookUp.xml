@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><townSearchRequest>
+	<appId>PC</appId>
+	<appVersion>1.0</appVersion>
+	<townsearch>
+		<country>IN</country>
+		<town>PUNE</town>
+		<postcode>411057</postcode>
+	</townsearch>
+</townSearchRequest>
